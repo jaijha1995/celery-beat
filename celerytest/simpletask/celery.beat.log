@@ -1,0 +1,3 @@
+[2023-01-16 05:02:41,563: INFO/MainProcess] beat: Starting...
+[2023-01-16 05:02:41,631: WARNING/MainProcess] Reset: Timezone changed from 'Asia/New_York' to 'Asia/kolkata'
+[2023-01-16 05:02:51,741: INFO/MainProcess] Scheduler: Sending due task print-message-ten-seconds (print_msg_main)

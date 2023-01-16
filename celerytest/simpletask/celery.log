@@ -1,0 +1,75 @@
+[2023-01-16 04:57:06,343: INFO/MainProcess] Connected to redis://localhost:6379//
+[2023-01-16 04:57:06,356: INFO/MainProcess] mingle: searching for neighbors
+[2023-01-16 04:57:07,377: INFO/MainProcess] mingle: all alone
+[2023-01-16 04:57:07,399: WARNING/MainProcess] /home/jai/.local/lib/python3.8/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2023-01-16 04:57:07,400: INFO/MainProcess] celery@DESKTOP-96SPO4L ready.
+[2023-01-16 04:59:58,267: CRITICAL/MainProcess] Unrecoverable error: UnknownTimeZoneError('Asia/New_York')
+Traceback (most recent call last):
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/worker/worker.py", line 203, in start
+    self.blueprint.start(self)
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 332, in start
+    blueprint.start(self)
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 628, in start
+    c.loop(*c.loop_args())
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/jai/.local/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/jai/.local/lib/python3.8/site-packages/kombu/transport/redis.py", line 1326, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/jai/.local/lib/python3.8/site-packages/kombu/transport/redis.py", line 562, in on_readable
+    chan.handlers[type]()
+  File "/home/jai/.local/lib/python3.8/site-packages/kombu/transport/redis.py", line 967, in _brpop_read
+    self.connection._deliver(loads(bytes_to_str(item)), dest)
+  File "/home/jai/.local/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 991, in _deliver
+    callback(message)
+  File "/home/jai/.local/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 624, in _callback
+    return callback(message)
+  File "/home/jai/.local/lib/python3.8/site-packages/kombu/messaging.py", line 626, in _receive_callback
+    return on_m(message) if on_m else self.receive(decoded, message)
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 596, in on_task_received
+    strategy(
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/worker/strategy.py", line 137, in task_message_handler
+    message.body, message.headers, False, app.uses_utc_timezone(),
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/app/base.py", line 1307, in uses_utc_timezone
+    return self.timezone == timezone.utc
+  File "/home/jai/.local/lib/python3.8/site-packages/kombu/utils/objects.py", line 30, in __get__
+    return super().__get__(instance, owner)
+  File "/usr/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/app/base.py", line 1322, in timezone
+    return timezone.get_timezone(conf.timezone)
+  File "/home/jai/.local/lib/python3.8/site-packages/celery/utils/time.py", line 130, in get_timezone
+    return _timezone(zone)
+  File "/home/jai/.local/lib/python3.8/site-packages/pytz/__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'Asia/New_York'
+[2023-01-16 04:59:59,447: WARNING/MainProcess] Restoring 1 unacknowledged message(s)
+[2023-01-16 05:02:51,663: INFO/MainProcess] Connected to redis://localhost:6379//
+[2023-01-16 05:02:51,674: INFO/MainProcess] mingle: searching for neighbors
+[2023-01-16 05:02:52,689: INFO/MainProcess] mingle: all alone
+[2023-01-16 05:02:52,741: WARNING/MainProcess] /home/jai/.local/lib/python3.8/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2023-01-16 05:02:52,742: INFO/MainProcess] celery@DESKTOP-96SPO4L ready.
+[2023-01-16 05:02:52,844: INFO/MainProcess] Task print_msg_main[37475727-9631-4aeb-aae5-6d82bbcaca69] received
+[2023-01-16 05:02:52,846: INFO/MainProcess] Task print_time[3ba065e6-9ee0-4c29-b2f1-56cd7a4d3d74] received
+[2023-01-16 05:02:52,846: WARNING/ForkPoolWorker-1] Celery is working!! Message is Hello World
+[2023-01-16 05:02:52,850: WARNING/ForkPoolWorker-3] Current Time is 05:02:52
+[2023-01-16 05:02:52,852: INFO/MainProcess] Task get_calculation[e1502573-c8d6-43e0-ba4c-fb54cb1fe97f] received
+[2023-01-16 05:02:52,856: INFO/MainProcess] Task print_msg_main[b746b9d0-e385-4508-ae17-c6039e47f01f] received
+[2023-01-16 05:02:52,859: WARNING/ForkPoolWorker-4] Celery is working!! Message is Hello
+[2023-01-16 05:02:52,862: INFO/ForkPoolWorker-1] Task print_msg_main[37475727-9631-4aeb-aae5-6d82bbcaca69] succeeded in 0.017161399999622517s: None
+[2023-01-16 05:02:52,869: INFO/ForkPoolWorker-3] Task print_time[3ba065e6-9ee0-4c29-b2f1-56cd7a4d3d74] succeeded in 0.020184900000003836s: None
+[2023-01-16 05:02:52,873: INFO/ForkPoolWorker-2] Task get_calculation[e1502573-c8d6-43e0-ba4c-fb54cb1fe97f] succeeded in 0.015704200000072888s: 30
+[2023-01-16 05:02:52,875: INFO/ForkPoolWorker-4] Task print_msg_main[b746b9d0-e385-4508-ae17-c6039e47f01f] succeeded in 0.016438600000128645s: None
